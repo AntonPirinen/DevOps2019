@@ -1,0 +1,35 @@
+anton@anton-VirtualBox:~/devops2019/part1$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+5c97e6a89287        nginx               "nginx -g 'daemon of…"   4 minutes ago       Exited (0) 3 minutes ago                       optimistic_goldberg
+46a6037768f9        nginx               "nginx -g 'daemon of…"   4 minutes ago       Exited (0) 3 minutes ago                       trusting_bassi
+1ea1e6032d34        nginx               "nginx -g 'daemon of…"   5 minutes ago       Exited (0) 3 seconds ago                       beautiful_liskov
+anton@anton-VirtualBox:~/devops2019/part1$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+5c97e6a892871343d1ebc7a06ef0a850fa802a709cf52e6227e7abfd406ca11d
+46a6037768f92816332a0cdde505d17eb0655dfa2d9ea04f1dd0be759b88cec8
+1ea1e6032d34cbfc00cd7d94374232969266985e04574d3100d1d3e58f0cd75d
+
+Total reclaimed space: 0B
+anton@anton-VirtualBox:~/devops2019/part1$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+
+anton@anton-VirtualBox:~/devops2019/part1$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              5a3221f0137b        2 weeks ago         126MB
+anton@anton-VirtualBox:~/devops2019/part1$ docker rmi nginx
+Untagged: nginx:latest
+Untagged: nginx@sha256:53ddb41e46de3d63376579acf46f9a41a8d7de33645db47a486de9769201fec9
+Deleted: sha256:5a3221f0137beb960c34b9cf4455424b6210160fd618c5e79401a07d6e5a2ced
+Deleted: sha256:9517458cc6efeca05fee894eb0dda7cda7a704a6469e4624792289c9ff4350c0
+Deleted: sha256:963e4580fca3bf364728a7df40a2348939c25213d32508c53849108d05764093
+Deleted: sha256:1c95c77433e8d7bf0f519c9d8c9ca967e2603f0defbf379130d9a841cca2e28e
+anton@anton-VirtualBox:~/devops2019/part1$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+
+
+
+
