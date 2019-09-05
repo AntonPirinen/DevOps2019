@@ -1,0 +1,34 @@
+sh -c 'sudo docker run -d -i --name ubuntu ubuntu:16.04; sudo docker exec -it ubuntu bash -c 'echo "Input website:"; read -p "Input website:" website; echo "Searching.."; sudo apt-get update; sudo apt-get install curl; sleep 1; sudo curl http://$website''
+
+
+registry.hub.docker.com/library/ubuntu:16.04
+
+anton@anton-VirtualBox:~$ sh -c 'sudo docker run -d -i --name ubuntu ubuntu:16.04; sudo docker exec -it ubuntu bash -c 'echo "Input website:"; read -p "Input website:" website; echo "Searching.."; sudo apt-get update; sudo apt-get install curl; sleep 1; sudo curl http://$website''
+714dd6a84a99d256824f5e7c49586251e886bcbe71e208fa8231b71f8bab24cc
+
+Input website:helsinki.fi
+Searching..
+Hit:1 http://fi.archive.ubuntu.com/ubuntu xenial InRelease
+Hit:2 http://fi.archive.ubuntu.com/ubuntu xenial-updates InRelease
+Hit:3 http://fi.archive.ubuntu.com/ubuntu xenial-backports InRelease                  
+Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]            
+Hit:5 https://download.docker.com/linux/ubuntu xenial InRelease 
+Fetched 109 kB in 0s (154 kB/s)                              
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+curl is already the newest version (7.47.0-1ubuntu2.13).
+0 upgraded, 0 newly installed, 0 to remove and 493 not upgraded.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+anton@anton-VirtualBox:~$ 
+
+
+
+
