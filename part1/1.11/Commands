@@ -1,0 +1,2 @@
+docker build -t backend-test .
+docker run -p 8000:8000 -v $(pwd)/lokit.txt:/backend-example-docker/logs.txt backend-test

@@ -1,0 +1,2 @@
+docker build -t fend .
+docker run -p 8000:5000 fend
