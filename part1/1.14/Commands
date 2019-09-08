@@ -1,0 +1,2 @@
+docker build -t railsit .
+docker run -p 3010:3000 railsit
